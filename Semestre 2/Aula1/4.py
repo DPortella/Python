@@ -5,10 +5,12 @@ num = int(input("Indique quantos termos deseja fazer: "))
 a = 1
 b = 0
 i = 0
+lst = []
 
 while i < num:
     c = a + b
     b = a
     a = c
+    lst.append(c)
     i += 1
-    print(c)
+print(lst)
