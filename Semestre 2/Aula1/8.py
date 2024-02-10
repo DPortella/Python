@@ -1,13 +1,32 @@
 #Crie uma calculadora que utilize funções para fazer as 4 operações básicas, os números usados devem vir de um input do\
 # teclado.
 
-num1 = float(input("Dê o primeiro número da operação: "))
-num2 = float(input("Dê o segundo número: "))
+def adicao(a, b):
+    return a + b
 
-tipo = int(input("Indique o tipo de operação: \n 1 para somar \n 2 para subtrair \n 3 para mulltiplicar \n"
-             "4 para dividir:"))
+def subtracao(a, b):
+    return a - b
 
-if tipo == 1: print(num1 + num2)
-elif tipo == 2: print(num1 - num2)
-elif tipo == 3: print(num1 * num2)
-else: print(num1 / num2)
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Não é possível dividir por zero."
+
+try:
+    numero1 = float(input("Digite o primeiro número: "))
+    numero2 = float(input("Digite o segundo número: "))
+except ValueError:
+    print("Por favor, digite números válidos.")
+    exit()
+
+soma = adicao(numero1, numero2)
+subtracao_resultado = subtracao(numero1, numero2)
+multiplicacao_resultado = multiplicacao(numero1, numero2)
+divisao_resultado = divisao(numero1, numero2)
+
+print(f"\nResultados:\nSoma: {soma}\nSubtração: {subtracao_resultado}\nMultiplicação: {multiplicacao_resultado}")
+print(f"Divisão: {divisao_resultado}")

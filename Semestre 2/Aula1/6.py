@@ -6,8 +6,8 @@ frase = input("Digite a frase: ")
 x = " "
 for i in range(len(frase)):
     if not i % 2:
-        x = x + frase[i].upper()
+        x += frase[i].upper()
     else:
-        x = x + frase[i].lower()
+        x += frase[i].lower()
 
 print(str(x))

@@ -5,8 +5,10 @@ dict = {}
 
 while True:
     key = input("Indique uma nova chave para o dicionário: ")
-    if key == "N":
-        print(dict)
-        break
     value = input("Indique um novo valor para o dicionário: ")
     dict[key] = value
+    continua = input("Deseja continuar? (S/N): ").upper()
+    if continua != 'S':
+        break
+
+print(dict)
