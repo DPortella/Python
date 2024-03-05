@@ -25,6 +25,15 @@ class professor(Pessoa):
     def print_turma(self):
         print(f"A turma é {self.turma}")
 
+
+class aluno(Pessoa):
+    def __init__(self, nome, idade, peso, rm):
+            super().__init__(nome, idade, peso)
+            self.rm = rm
+
+    def print_rm(self):
+        print(f"O RM é {self.rm}")
+
 prof1 = professor("Kaio", 38, 85, "1td")
 print(prof1)
 print(prof1.get_peso())
@@ -32,3 +41,8 @@ print(prof1.print_turma())
 
 ser = Pessoa("", "", 90)
 print(ser.get_peso())
+
+alu = aluno("Erik", 32, 50, 42586866)
+print(alu)
+print(alu.get_peso())
+print(alu.print_rm())

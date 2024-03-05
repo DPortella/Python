@@ -1,3 +1,5 @@
+# Crie métodos especiais para a classe Clientes
+
 class ClienteLanHouse:
     def __init__(self, nome, tempo_de_uso, creditos):
         self.nome = nome
