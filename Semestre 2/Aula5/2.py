@@ -5,7 +5,7 @@ class carro:
         self.nome = "Golf"
         self.marca = "Volkswagen"
         self.peso = 500
-        self.altura: 1.50
+        self.altura = 1.50
 
     def __del__(self):
         print("Objeto deletado!")
