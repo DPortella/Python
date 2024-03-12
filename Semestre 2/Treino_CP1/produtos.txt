@@ -1,4 +1,3 @@
-Nome,Preco,Departamento
 Arroz,10.50,Alimentos
 Feijão,8.99,Alimentos
 Sabonete,2.50,Higiene

@@ -28,8 +28,8 @@ class Departamento:
 def ler_arquivo_funcionarios(nome_arquivo):
     funcionarios = []
     with open(nome_arquivo, 'r', encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()[1:]  # Ignorar o cabeçalho
-        for linha in linhas:
+        #linhas = arquivo.readlines()[1:]  # Ignorar o cabeçalho
+        for linha in arquivo:
             dados = linha.strip().split(',')
             nome = dados[0]
             cargo = dados[1]

@@ -1,4 +1,3 @@
-Produto,Quantidade,Preco_Unitario
 Camiseta,20,25.99
 Calça Jeans,15,45.50
 Tênis,10,79.99

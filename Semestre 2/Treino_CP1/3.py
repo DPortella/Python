@@ -31,8 +31,8 @@ class Departamento:
 def ler_arquivo_produtos(nome_arquivo):
     departamentos = {}
     with open(nome_arquivo, 'r', encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()[1:]  # Ignorar o cabeçalho
-        for linha in linhas:
+        #linhas = arquivo.readlines()[1:]  # Ignorar o cabeçalho
+        for linha in arquivo:
             dados = linha.strip().split(',')
             nome = dados[0]
             preco = float(dados[1])

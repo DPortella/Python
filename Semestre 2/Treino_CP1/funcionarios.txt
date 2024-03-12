@@ -1,4 +1,3 @@
-Nome,Cargo,Salario
 João,Analista,3000
 Pedro,Desenvolvedor,4000
 Ana,Analista,3200

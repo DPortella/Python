@@ -14,8 +14,8 @@ class ItemVenda:
 def ler_arquivo_vendas(nome_arquivo):
     itens_venda = []
     with open(nome_arquivo, 'r', encoding="utf-8") as arquivo:
-        linhas = arquivo.readlines()[1:]  # Ignorar o cabeçalho
-        for linha in linhas:
+        #linhas = arquivo.readlines()[1:]  # Ignorar o cabeçalho
+        for linha in arquivo:
             dados = linha.strip().split(',')
             print(dados)
             produto = dados[0]
