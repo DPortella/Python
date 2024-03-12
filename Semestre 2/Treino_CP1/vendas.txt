@@ -1,0 +1,11 @@
+Produto,Quantidade,Preco_Unitario
+Camiseta,20,25.99
+Calça Jeans,15,45.50
+Tênis,10,79.99
+Meias,30,9.99
+Shorts,12,35.75
+Blusa,25,29.99
+Chapéu,8,15.50
+Saia,18,22.99
+Sandália,14,39.99
+Boné,20,12.50

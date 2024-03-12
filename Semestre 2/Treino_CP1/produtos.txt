@@ -1,0 +1,7 @@
+Nome,Preco,Departamento
+Arroz,10.50,Alimentos
+Feijão,8.99,Alimentos
+Sabonete,2.50,Higiene
+Shampoo,15.75,Higiene
+Detergente,4.25,Limpeza
+Esponja,3.99,Limpeza

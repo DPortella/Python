@@ -5,23 +5,48 @@
 # da conta.
 
 class ContaBancaria:
-    def __init__(self, titular, saldo):
+    def __init__(self, titular, saldo=0):
         self.titular = titular
         self.saldo = saldo
 
-    def depositar(self):
+    def depositar(self, valor):
+        self.saldo += valor
 
-    def sacar(self):
+    def sacar(self, valor):
+        if valor <= self.saldo:
+            self.saldo -= valor
+            return True
+        else:
+            print("Saldo insuficiente.")
+            return False
 
-    def verificar(self):
+    def verificar_saldo(self):
+        return self.saldo
 
-
-class Corrente(ContaBancaria):
-    def __init__(self, titular, saldo, limite_cheque):
+class ContaCorrente(ContaBancaria):
+    def __init__(self, titular, saldo=0, limite_cheque_especial=0):
         super().__init__(titular, saldo)
-        self.limite_cheque = limite_cheque
+        self.limite_cheque_especial = limite_cheque_especial
 
-class Poupanca(ContaBancaria):
-    def __init__(self, titular, saldo, calcular_rendimento):
-        super().__init__(titular, saldo)
-        self.calcular_rendimento = calcular_rendimento
+    def sacar(self, valor):
+        if valor <= (self.saldo + self.limite_cheque_especial):
+            self.saldo -= valor
+            return True
+        else:
+            print("Limite do cheque especial ultrapassado.")
+            return False
+class ContaPoupanca(ContaBancaria):
+    def calcular_rendimento(self, taxa_rendimento):
+        rendimento_mensal = self.saldo * (taxa_rendimento / 100)
+        return rendimento_mensal
+
+# Exemplo de uso das classes
+conta_corrente = ContaCorrente("João", 1000, 500)
+conta_corrente.depositar(200)
+print("Saldo da Conta Corrente:", conta_corrente.verificar_saldo())
+conta_corrente.sacar(1500)
+print("Saldo da Conta Corrente após saque:", conta_corrente.verificar_saldo())
+
+conta_poupanca = ContaPoupanca("Maria", 5000)
+rendimento = conta_poupanca.calcular_rendimento(0.5)  # 0.5% de rendimento mensal
+print("Rendimento mensal da Conta Poupança:", rendimento)

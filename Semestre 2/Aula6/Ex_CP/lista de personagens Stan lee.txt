@@ -1,0 +1,4 @@
+Homem-Aranha;Peter Parker
+Homem de Ferro;Tony Stark
+Hulk;Bruce Banner
+Thor;Donald Blake

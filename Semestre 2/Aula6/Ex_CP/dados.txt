@@ -1,0 +1,3 @@
+Camiseta, 29.99, 50
+Calça Jeans, 59.99, 30
+Tenis, 79.99, 20
