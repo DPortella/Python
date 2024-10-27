@@ -7,7 +7,7 @@ while True:
     senha = input("indique a senha: ")
 
 
-    if usuario != "DPortella" and senha != "senha123":
+    if usuario != "DPortella" and senha != "123":
         print("Não encontrado!")
 
     else:
